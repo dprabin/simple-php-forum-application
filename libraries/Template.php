@@ -10,7 +10,7 @@ class Template {
     protected $vars = array();
     
     //Constructor
-    public function __constructor($template){
+    public function __construct($template){
         $this->template = $template;
     }
     
