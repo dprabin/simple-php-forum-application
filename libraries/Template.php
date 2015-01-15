@@ -16,7 +16,7 @@ class Template {
     
     //Get template variables
     public function __get($key){
-        return $this->vars[$key]
+        return $this->vars[$key];
     }
     
     //Set template variables
