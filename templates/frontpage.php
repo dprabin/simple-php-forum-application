@@ -3,7 +3,7 @@
                             <li class="topic">
                             <div class="row">
                             <div class="col-md-2">
-                                <img class="avatar pull-left" src="img/gravatar.jpg">
+                                <img class="avatar pull-left" src="templates/img/gravatar.jpg">
                             </div>    
                             <div class="col-md-10">
                                 <div class="topic-content pull-right">
@@ -20,7 +20,7 @@
                             <li class="topic">
                             <div class="row">
                             <div class="col-md-2">
-                                <img class="avatar pull-left" src="img/gravatar.jpg">
+                                <img class="avatar pull-left" src="templates/img/gravatar.jpg">
                             </div>    
                             <div class="col-md-10">
                                 <div class="topic-content pull-right">
@@ -36,7 +36,7 @@
                             <li class="topic">
                             <div class="row">
                             <div class="col-md-2">
-                                <img class="avatar pull-left" src="img/gravatar.jpg">
+                                <img class="avatar pull-left" src="templates/img/gravatar.jpg">
                             </div>
                             <div class="col-md-10">
                                 <div class="topic-content pull-right">
