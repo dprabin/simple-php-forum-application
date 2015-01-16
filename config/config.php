@@ -8,6 +8,6 @@ define ("DB_NAME", "talkingspace");
 define("SITE_TITLE", "Welcome to TalkingSpace Forum!");
 
 //Paths
-define('BASE_URI','http://'.$_SERVER['SERVER_NAME'].'/testphp/simple-php-forum-application/');
+define('BASE_URI','http://'.$_SERVER['SERVER_NAME'].':8888/testphp/simple-php-forum-application/');
 
 
