@@ -11,7 +11,7 @@
                 <div class="topic-content pull-right">
                     <h3><a href="topic.php"><?php echo $topic->title; ?></a> </h3>
                     <div class="topic-info">
-                        <a href="category.php"><?php echo $topic->title; ?></a> >> <a href="profile.php"><?php echo $topic->title; ?></a>
+                        <a href="category.php">Category: <?php //echo $topic->cateogry; ?></a> >> <a href="profile.php">Author: <?php //echo $topic->username; ?></a>
                     <span class="badge pull-right">3</span>
                     </div>
                 </div>    
