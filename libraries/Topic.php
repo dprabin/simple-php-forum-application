@@ -75,7 +75,7 @@ class Topic {
     }
     
     //get total replies
-    public function getTotalReplies ($topic_id){
+    public function getTotalReplies($topic_id){
         $this->db->query('select * from replies where topic_id = '.$topic_id);
         $rows = $this->db->resultset();
         return $this->db->rowCount();
