@@ -5,13 +5,14 @@
             <li class="topic">
             <div class="row">
             <div class="col-md-2">
-                <img class="avatar pull-left" src="templates/img/gravatar.jpg">
+                <img class="avatar pull-left" src="templates/img/<?php eho $topic['avatar']; ?>">
             </div>    
             <div class="col-md-10">
                 <div class="topic-content pull-right">
-                    <h3><a href="topic.php"><?php echo $topic->title; ?></a> </h3>
+                    <h3><a href="topic.php"><?php echo $topic->title; echo $topic['title']; ?></a> </h3>
                     <div class="topic-info">
-                        <a href="category.php">Category: <?php //echo $topic->cateogry; ?></a> >> <a href="profile.php">Author: <?php //echo $topic->username; ?></a>
+                        <a href="topics.php?category=<?php echo urlFormat($topic['category_id']); ?>"><?php echo $topic['name']; ?></a> >> 
+                        <a href="topics.php?category=<?php echo urlFormat($topic['user_id']); ?>"><?php echo $topic['username']; ?></a>
                     <span class="badge pull-right">3</span>
                     </div>
                 </div>    
