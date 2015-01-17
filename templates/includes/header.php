@@ -15,6 +15,13 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo BASE_URI; ?>templates/css/custom.css" rel="stylesheet">
+    <?php 
+      //Check if title is set, if not Assign it
+      if (!isset($title)){
+        $title = SITE_TITLE;
+      }
+      ?>
+
   </head>
 
   <body>
@@ -46,7 +53,7 @@
             <div class="col-md-8">
                 <div class="main-col">
                     <div class="block">
-                    <h1 class="pull-left">Talking Space Forum</h1>
+                    <h1 class="pull-left"><?php echo $title; ?></h1>
                     <h4 class="pull-right">A Simple PHP forum engine</h4>
                         <div class="clearfix"></div>
                         <hr />
