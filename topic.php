@@ -3,11 +3,11 @@
 //Create Topic Object
 $topic = new Topic;
 
-//Get Template and Assign Vars
-$template = new Template('templates/frontpage.php');
-
 //Get Category id from url
 $topic_id = $_GET['id'];
+
+//Get Template and Assign Vars
+$template = new Template('templates/topic.php');
 
 //Assign Variables to template object
 
