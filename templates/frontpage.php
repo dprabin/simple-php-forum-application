@@ -14,7 +14,7 @@
                         <a href="topics.php?category=<?php echo urlFormat($topic['category_id']); ?>"><?php echo $topic['name']; ?></a> >> 
                         <a href="topics.php?user=<?php echo urlFormat($topic['user_id']); ?>"><?php echo $topic['username']; ?></a> >>
                         Posted on: <?php echo formatDate($topic['create_date']); ?>
-                    <span class="badge pull-right">3</span>
+                    <span class="badge pull-right"><?php echo replyCount($topic['id']); ?></span>
                     </div>
                 </div>    
             </div>
