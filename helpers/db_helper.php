@@ -20,5 +20,20 @@
         return $results;
     }
 
+    //User Post Count
+    function userPostCount($user_id){
+        $db = new Database;
+        $db->query('select * from topics where user_id = :user_id');
+        $db->bind(':user_id',$user_id);
+        $rows = $db->resultset();
+        $topic_count = $db->rowCount();
+        
+        $db->query('select * from replies where user_id = :user_id');
+        $db->bind(':user_id',$user_id);
+        $rows = $db->resultset();
+        $reply_count = $db->rowCount();
+        
+        return $topic_count + $reply_count;
+    }
 
 ?>
