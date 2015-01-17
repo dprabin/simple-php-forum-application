@@ -19,4 +19,19 @@ function formatDate($date) {
     return $date;
 }
 
+//Add classname active if the category is active
+function is_active($category){
+    if(isset($_GET['category'])){
+        if($_GET['category'] == $cateogry){
+            return 'active';
+        } else {
+            return '';
+        }
+    } else {
+        if($category == null){
+        return 'active';
+        }
+    }
+}
+
 ?>
