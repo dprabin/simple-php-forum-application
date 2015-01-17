@@ -24,7 +24,7 @@
                         <div class="list-group">
                             <a href="topics.php" class="list-group-item <?php echo is_active(null); ?>">All topics <span class="badge pull-right">14</span></a>
                             <?php foreach(getCategories() as $category) : ?>
-                                <a href="topics.php?category=<?php $category['id']; ?>" class="list-group-item"><?php echo $category['name']; ?><span class="badge pull-right">14</span></a>
+                                <a href="topics.php?category=<?php echo $category['id']; ?>" class="list-group-item <?php echo is_active($category['id']); ?>"><?php echo $category['name']; ?><span class="badge pull-right">14</span></a>
                             <?php endforeach; ?>
                         </div>
                         
