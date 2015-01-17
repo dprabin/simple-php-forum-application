@@ -51,5 +51,33 @@ class Topic {
         $result = $this->db->single();
         return $result;
     }
-
+    
+    //Get Topic By ID
+    public function getTopic($id){
+        $this->db->query('select topics.*, users.username, users.name, users.avatar from topics
+        inner join users on topics.user_id=users.id
+        where topics.id = :id');
+        $this->db->bind(':id',$id);
+        
+        $row = $this->db->single();
+        return $row;
+    }
+ 
+    //Get replies for the topic
+    public function getReplies($topic_id){
+        $this->db->query('select replies.*,users.* from replies
+        inner join users on replies.user_id=users.id
+        where replies.topic_id = :topic_id
+        order by create_date asc');
+        $this->db->bind(':topic_id',$topic_id);
+        $rows = $this->db->resultset();
+        return $rows;
+    }
+    
+    //get total replies
+    public function getTotalReplies ($topic_id){
+        $this->db->query('select * from replies where topic_id = '.$topic_id);
+        $rows = $this->db->resultset();
+        return $this->db->rowCount();
+    }
 }
