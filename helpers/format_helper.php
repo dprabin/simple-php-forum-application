@@ -5,7 +5,7 @@
 //URL FORMAT
 function urlFormat($str){
     //Strip out all whitespaces
-    $str=preg_replace('/\s*/',$str);
+    $str = preg_replace('/\s*/','', $str);
     //Convert the string to lowercase
     $str = strtolower($str);
     //URL Encode
