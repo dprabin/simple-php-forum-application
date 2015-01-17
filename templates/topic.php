@@ -15,10 +15,30 @@
             </div>
         <div class="col-md-10">
             <div class="topic-content pull-right">
-                <p>I just worked in split mode in dreamweaver and paid attention to what was that. Hwo did you learn CSS and HTML? How long did it take you until you were profficient?</p>
+                <?php echo $topic['body']; ?>
             </div>
         </div>
     </li>
+    <?php foreach($replies as $reply) : ?>
+    <li class="topic topic">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="user-info">
+                    <img class="avatar pull-left" src="images/avatars/<?php echo $reply['avatar']; ?>" />
+                    <ul>
+                        <li><strong><?php echo $reply['username']; ?></strong></li>
+                        <li><?php echo userPostCount($reply['user_id']); ?> Posts</li>
+                        <li><a href="<?php echo BASE_URI; ?>topics.php?user=<?php echo $reply['user_id']; ?>">Profile</a>  </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col-md-10">
+            <div class="topic-content pull-right">
+                <?php echo $reply['body']; ?>
+            </div>
+        </div>
+    </li>
+    <?php endforeach; ?>
 </ul>
 <h3>Reply to Topic</h3>
 <form role="form">
