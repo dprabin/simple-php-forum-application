@@ -9,7 +9,7 @@
             </div>    
             <div class="col-md-10">
                 <div class="topic-content pull-right">
-                    <h3><a href="topic.php?id=<?php echo $topic['id']; ?>"><?php echo $topic['title']; ?></a> </h3>
+                    <h3><a href="topic.php?id=<?php echo $topic['id']; ?>"><?php echo $topic['title']; ?></a></h3>
                     <div class="topic-info">
                         <a href="topics.php?category=<?php echo urlFormat($topic['category_id']); ?>"><?php echo $topic['name']; ?></a> >> 
                         <a href="topics.php?user=<?php echo urlFormat($topic['user_id']); ?>"><?php echo $topic['username']; ?></a> >>
