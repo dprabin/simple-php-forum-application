@@ -22,7 +22,7 @@ function formatDate($date) {
 //Add classname active if the category is active
 function is_active($category){
     if(isset($_GET['category'])){
-        if($_GET['category'] == $cateogry){
+        if($_GET['category'] == $category){
             return 'active';
         } else {
             return '';
