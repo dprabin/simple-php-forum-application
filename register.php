@@ -12,6 +12,13 @@ if(isset($_POST['register'])){
     $data['password2'] = md5($_POST['password2']);
     $data['about'] = $_POST['about'];
     $data['last_activity'] = date("Y-m-d H:i:s");
+    
+    //Upload Avatar image
+    if ($user->uploadAvatar()){
+        $data['avatar'] = $_FILES["avatar"]["name"];
+    } else {
+        $data['avatar'] = 'noimage.png';
+    }
 }
 
 //Get Template and Assign Vars
