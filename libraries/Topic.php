@@ -52,6 +52,18 @@ class Topic {
         return $result;
     }
     
+    //Get Topic by user ID
+    public function getByUser($user_id){
+        $this->db->query("select topics.*, categories.*, users.username,users.avatar from topics
+                    inner join categories on topics.category_id=categories.id
+                    inner join users on topics.user_id=users.id
+                    where topics.user_id = :user_id");
+        $this->db->bind(':user_id',$user_id);
+        results=$this->db->resutlset();
+        return$results;
+    }
+    
+    
     //Get Topic By ID
     public function getTopic($id){
         $this->db->query('select topics.*, users.username, users.name, users.avatar from topics
