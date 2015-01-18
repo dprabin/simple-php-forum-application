@@ -59,8 +59,8 @@ class Topic {
                     inner join users on topics.user_id=users.id
                     where topics.user_id = :user_id");
         $this->db->bind(':user_id',$user_id);
-        results=$this->db->resutlset();
-        return$results;
+        $results=$this->db->resutlset();
+        return $results;
     }
     
     
