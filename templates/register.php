@@ -11,7 +11,10 @@
         <label>Choose Username*</label><input type="text" class="form-control" name="username" placeholder="Create a Username" />
     </div>
     <div class="form-group">
-        <label>Password*</label><input type="password" class="form-control" name="email" placeholder="Enter a Password" />
+        <label>Password*</label><input type="password" class="form-control" name="password" placeholder="Enter a Password" />
+    </div>
+    <div class="form-group">
+        <label>Confirm Password*</label><input type="password" class="form-control" name="password2" placeholder="Confirm Password" />
     </div>
     <div class="form-group">
         <label>Upload Avatar</label><input type="file" name="avatar"/>
