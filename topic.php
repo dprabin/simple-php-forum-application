@@ -6,6 +6,7 @@ $topic = new Topic;
 //Get Category id from url
 $topic_id = $_GET['id'];
 
+
 //Get Template and Assign Vars
 $template = new Template('templates/topic.php');
 
