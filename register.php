@@ -2,6 +2,8 @@
 <?php 
 //Create Topic Object
 $topic = new Topic;
+//Create User Object
+$user = new User;
 
 if(isset($_POST['register'])){
     $data = array();
