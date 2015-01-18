@@ -4,7 +4,7 @@ class User {
     
     
     //Upload User Avatar
-    public funciton uploadAvatar(){
+    public function uploadAvatar(){
         $allowedExts = array("gif","jpg","jpeg","png");
         $temp = explode(".",$_FILES['avatar']['name']);
         $extension = end($temp);
