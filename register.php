@@ -15,6 +15,7 @@ if(isset($_POST['register'])){
     $data['about'] = $_POST['about'];
     $data['last_activity'] = date("Y-m-d H:i:s");
     
+    /* commented to test user validation without inserting users
     //Upload Avatar image
     if ($user->uploadAvatar()){
         $data['avatar'] = $_FILES["avatar"]["name"];
@@ -28,6 +29,7 @@ if(isset($_POST['register'])){
     } else {
         redirect('index.php', 'Something went wrong with registration','error');
     }
+    */
 }
 
 //Get Template and Assign Vars
