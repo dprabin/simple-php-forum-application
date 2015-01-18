@@ -58,6 +58,29 @@ class User {
         }
 
     }
-
+    
+    //User login 
+    public function login($username,$password){
+        $this->db->query('select * from users where username = :username and password = :password');
+        //Bind values
+        $this->db->bind('username', $username);
+        $this->db->bind('password', $password);
+        $result = $this->db->single();
+        //check result
+        if($this->db->rowCount()>0){
+            $this->setUserData($row);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    //Set User data
+    private function setUserData($row){
+        $_SESSION['is_logged_in']=true;
+        $_SESSION['user_id']=$result->id;
+        $_SESSION['username']=$result->username;
+        $_SESSION['name']=$result->name;
+    }
 }
 ?>
