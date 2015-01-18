@@ -19,7 +19,7 @@
                             <form role="form" method="post" action="login.php">
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input name="username" type="email" class="form-control" placeholder="Enter Username" />
+                                    <input name="username" type="text" class="form-control" placeholder="Enter Username" />
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
