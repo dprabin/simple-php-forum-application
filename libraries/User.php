@@ -15,7 +15,7 @@ class User {
             || ($_FILES['avatar']['type'] == 'image/pjpg')
             || ($_FILES['avatar']['type'] == 'image/x-png')
             || ($_FILES['avatar']['type'] == 'image/png'))
-           && ($_FILES['avatar']['size'] < 20000)
+           && ($_FILES['avatar']['size'] < 500000)
            && in_array($extension,$allowedExts)) {
                 if ($_FILES['avatar']['error'] > 0){
                     redirect('register.php', $_FILES['avatar']['error'],'error');
@@ -23,7 +23,7 @@ class User {
                     if (file_exists("images/avatars/" . $_FILES['avatar']['name'])){
                         redirect('register.php', 'File already exists','error');
                     } else {
-                        move_upload_file($_FILES['avatar']['tmp_name'], "images/avatars".$_FILES['avatar']['name']);
+                        move_uploaded_file($_FILES['avatar']['tmp_name'], "images/avatars/".$_FILES['avatar']['name']);
                         return true;
                     }
                 }
