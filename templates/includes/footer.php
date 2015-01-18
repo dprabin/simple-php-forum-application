@@ -7,7 +7,7 @@
                 <div class="sidebar">
                     <div class="block">
                         <h3>Login Form</h3>
-                        <form role="form">
+                        <form role="form" method="post" action="login.php">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input name="username" type="email" class="form-control" placeholder="Enter Username" />
