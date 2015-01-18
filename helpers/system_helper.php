@@ -46,4 +46,13 @@ function displayMessage(){
     }
 }
 
+//Check whether user is logged in
+function isLoggedIn(){
+    if(issest($_SESSION['is_logged_in'])){
+        return true;
+    } else {
+        return false;
+    }
+}
+
 ?>
