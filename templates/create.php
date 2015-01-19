@@ -8,11 +8,9 @@
                             <div class="form-group">
                                 <label>Category</label>
                                 <select class="form-control" name="category">
-                                    <option>Design</option>
-                                    <option>Development</option>
-                                    <option>Business and Marketing</option>
-                                    <option>Search Engines</option>
-                                    <option>Cloud and Hosting</option>
+                                    <?php foreach(getCategories() as $category) : ?>
+                                        <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form-group">
