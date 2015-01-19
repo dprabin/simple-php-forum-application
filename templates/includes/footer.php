@@ -32,9 +32,14 @@
                     <div class="block">
                         <h3>Categories</h3>
                         <div class="list-group">
-                            <a href="topics.php" class="list-group-item <?php echo is_active(null); ?>">All topics <span class="badge pull-right">14</span></a>
+                            <a href="topics.php" class="list-group-item <?php echo is_active(null); ?>">All topics <span class="badge pull-right"><?php echo totalPostCount() ;?></span></a>
                             <?php foreach(getCategories() as $category) : ?>
-                                <a href="topics.php?category=<?php echo $category['id']; ?>" class="list-group-item <?php echo is_active($category['id']); ?>"><?php echo $category['name']; ?><span class="badge pull-right"><?php echo postCountByCategory($category['id']) ;?></span></a>
+                                <a href="topics.php?category=<?php echo $category['id']; ?>" class="list-group-item <?php echo is_active($category['id']); ?>">
+                                    <?php echo $category['name']; ?>
+                                    <span class="badge pull-right">
+                                        <?php echo postCountByCategory($category['id']) ;?>
+                                    </span>
+                            </a>
                             <?php endforeach; ?>
                         </div>
                         
