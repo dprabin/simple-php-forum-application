@@ -57,10 +57,10 @@ function isLoggedIn(){
 
 //Get Logged in user information
 function getUser(){
-    $userarray=array();
-    $userarray['user_id'] = $_SESSION['user_id'];
-    $userarray['username'] = $_SESSION['username'];
-    $userarray['name'] = $_SESSION['name'];
+    $userArray=array();
+    $userArray['user_id'] = $_SESSION['user_id'];
+    $userArray['username'] = $_SESSION['username'];
+    $userArray['name'] = $_SESSION['name'];
     return $userArray;
 }
 
