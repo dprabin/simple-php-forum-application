@@ -110,4 +110,20 @@ class Topic {
             return false;
         }
     }
+    
+    //Reply to a post
+    public function reply($data){
+        $this->db->query("insert into replies (topic_id,user_id,body)
+        values (:topic_id,:user_id,:body)");
+        
+        $this->db->bind(':topic_id',$data['topic_id']);
+        $this->db->bind(':user_id',$data['user_id']);
+        $this->db->bind(':body',$data['body']);
+        
+        if($this->db->execute()){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
