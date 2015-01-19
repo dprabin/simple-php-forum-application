@@ -44,7 +44,7 @@
 <?php if(isLoggedIn()) : ?>
     <form role="form" method="post" action="topic.php?id=<?php echo $topic['id']?>">
         <div class="form-group">
-            <textarea id="reply" rows="10" cols="80" class="form-control" name="reply"></textarea>
+            <textarea id="reply" rows="10" cols="80" class="form-control" name="body"></textarea>
             <script>CKEDITOR.replace('reply');</script>
         </div>
         <button name="do_reply" type="submit" class="btn btn-default">Reply</button>
