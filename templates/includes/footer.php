@@ -9,7 +9,7 @@
                         <h3>Login Form</h3>
                         <?php if(isLoggedIn()) : ?>
                             <div class="userdata">
-                                Welcome! <?php echo getUser()['name']; ?>
+                                Logged in as <?php echo getUser()['name']; ?>
                             </div>
                             <br />
                             <form role="form" method="post" action="logout.php">
