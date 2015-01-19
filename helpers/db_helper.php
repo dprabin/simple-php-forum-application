@@ -1,4 +1,10 @@
 <?php
+
+/*
+ * db_helper.php file contain functions that templates require 
+ * like category count, reply count etc
+ */
+
     //Count number of replies for each topic
     function replyCount($topic_id){
         $db = new Database;
@@ -44,6 +50,15 @@
         $result = $db->resultset();
         $category_count = $db->rowCount();
         return $category_count;
+    }
+
+    //Count total number of posts
+    function totalPostCount(){
+        $db = new Database;
+        $db->query('select * from topics where 1');
+        $result = $db->resultset();
+        $count = $db->rowCount();
+        return $count;
     }
 
 ?>
