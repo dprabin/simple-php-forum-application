@@ -11,7 +11,7 @@ if(isset($_POST['do_reply'])){
     //Create Data Array
     $data=array();
     $data['topic_id'] = $topic_id;
-    $data['body'] = $_GET['body'];
+    $data['body'] = $_POST['body'];
     $data['user_id'] = getUser()['user_id'];
     
     //Create Validator Object
