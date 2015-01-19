@@ -76,7 +76,7 @@ class User {
     }
     
     //Set User data
-    private function setUserData($row){
+    private function setUserData($result){
         $_SESSION['is_logged_in']=true;
         $_SESSION['user_id']=$result['id'];
         $_SESSION['username']=$result['username'];
