@@ -41,11 +41,15 @@
     <?php endforeach; ?>
 </ul>
 <h3>Reply to Topic</h3>
-<form role="form">
-    <div class="form-group">
-        <textarea id="reply" rows="10" cols="80" class="form-control" name="reply"></textarea>
-        <script>CKEDITOR.replace('reply');</script>
-    </div>
-</form>
+<?php if(isLoggedIn()) : ?>
+    <form role="form" method="post" action="topic.php?id=<?php echo $topic['id']?>">
+        <div class="form-group">
+            <textarea id="reply" rows="10" cols="80" class="form-control" name="reply"></textarea>
+            <script>CKEDITOR.replace('reply');</script>
+        </div>
+    </form>
+<?php else : ?>
+    <p>Please Login to Reply</p>
+<?php endif; ?>
 
 <?php include('includes/footer.php'); ?>
