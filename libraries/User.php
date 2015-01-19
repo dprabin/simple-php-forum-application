@@ -68,7 +68,7 @@ class User {
         $result = $this->db->single();
         //check result
         if($this->db->rowCount()>0){
-            $this->setUserData($row);
+            $this->setUserData($result);
             return true;
         } else {
             return false;
@@ -78,9 +78,18 @@ class User {
     //Set User data
     private function setUserData($row){
         $_SESSION['is_logged_in']=true;
-        $_SESSION['user_id']=$result->id;
-        $_SESSION['username']=$result->username;
-        $_SESSION['name']=$result->name;
+        $_SESSION['user_id']=$result['id'];
+        $_SESSION['username']=$result['username'];
+        $_SESSION['name']=$result['name'];
+    }
+    
+    //User Logout
+    public function logout(){
+        unset($_SESSION['is_logged_in']);
+        unset($_SESSION['user_id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['name']);
+        return true;
     }
 }
 ?>
