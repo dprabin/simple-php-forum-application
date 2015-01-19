@@ -35,5 +35,15 @@
         
         return $topic_count + $reply_count;
     }
+    
+    //Count post by category
+    function postCountByCategory($category_id){
+        $db = new Database;
+        $db->query('select * from topics where category_id = :category_id');
+        $db->bind(':category_id',$category_id);
+        $result = $db->resultset();
+        $category_count = $db->rowCount();
+        return $category_count;
+    }
 
 ?>
