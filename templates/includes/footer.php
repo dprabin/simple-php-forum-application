@@ -13,7 +13,7 @@
                             </div>
                             <br />
                             <form role="form" method="post" action="logout.php">
-                                <input type="submit" name="do_logout" class="btn btn-default" />
+                                <input type="submit" name="do_logout" class="btn btn-default" value="Log Out" />
                             </form>
                         <?php else : ?>
                             <form role="form" method="post" action="login.php">
