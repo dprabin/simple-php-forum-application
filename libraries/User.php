@@ -91,5 +91,12 @@ class User {
         unset($_SESSION['name']);
         return true;
     }
+    
+    //Get total number of users
+    public function getTotalUsers(){
+        $this->db->query('select * from users');
+        $result = $this->db->resultset();
+        return $this->db->rowCount();
+    }
 }
 ?>
