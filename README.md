@@ -1,4 +1,4 @@
-#Simple PHP Forum Application
+# Simple PHP Forum Application
 
 This is a simple PHP Forum Application created with core PHP. It uses simple Model-View-Controller (MVC) like pattern. This PHP forum Application uses Object Oriented programming to create a forum. It uses PHP Data Object (PDO) to connect to database It supports 
 
